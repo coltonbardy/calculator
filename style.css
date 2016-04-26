@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: Verdana, Helvetica;
+    background-color: cadetblue;
+    font-size: 50px;
+    border: 2px double black;
+    margin: auto;
+    width: 450px;
+    border-radius: 10px;
+    text-align: center;
+}
+#total {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100px;
+    width: 350px;
+}
+#clear, #clearall{
+    position: absolute;
+    background-color: slategray;
+    height: 45px;
+    width: 85px;
+    top: 55px;
+    right: 8px;
+    border: .5px solid black;
+    border-radius: 8px;
+}
+#clear {
+    top: 5px;
+}
+#calculator {
+    position: relative;
+    height: 500px;
+    width: 450px;
+    background-color: cadetblue;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: auto;
+}
+#operators button {
+    float: left;
+    display: block;
+    height: 55px;
+    width: 70px;
+    margin: 7px 10px;
+    border: .5px solid black;
+    border-radius: 8px;
+    font-size: 35px;
+
+}
+
+#numbers button {
+    display: block;
+    width: 70px;
+    height: 70px;
+    float: left;
+    text-align: center;
+    font-size: 35px;
+    padding: 10px;
+    margin: 5px 25px;
+    background: lightgray;
+    border: 2px solid black;
+    border-radius: 10px;
+}
