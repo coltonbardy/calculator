@@ -1,5 +1,6 @@
-function callback(type, value, item){
-    switch(value) {
+function calculate (type, value, item) {
+    // take value and display in #display
+    switch (value) {
         case undefined:
             $('#total').html("");
             break;
@@ -9,16 +10,19 @@ function callback(type, value, item){
     }
 }
 
-//My Calculator - create new calculator object
-var my_calculator = new calculator(callback);
+//global variables
+var my_calculator = new calculator(calculate);
 
-//After DOM load add click handlers to all buttons
 $(document).ready(function(){
-    $('button').on('click', function(){
+//in a .ready make a click handler for buttons with one function
+    $('button').on('click', function () {
         var val = $(this).text();
-        switch(val) {
+        switch (val) {
             case 'AC':
                 my_calculator.allClear();
+                break;
+            case 'C':
+                my_calculator.clear();
                 break;
             default:
                 my_calculator.addItem($(this).text());
@@ -27,6 +31,3 @@ $(document).ready(function(){
     });
 });
 
-function calculator(){
-    
-}
