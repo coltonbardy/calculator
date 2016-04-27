@@ -1,5 +1,5 @@
 function calculate (type, value, item) {
-    // take value and display in #display
+    // take value and display in #total
     switch (value) {
         case undefined:
             $('#total').html("");
