@@ -56,14 +56,15 @@ function numbers(num){
     opclick = false;
 }
 
-function numbers2(num){
-    if (typeof number[numberIndex] == 'undefined'){
-        number[numberIndex] = num;
-    }
-    else {
-        number[numberIndex] +=num;
-    }
-}
+// function numbers2(num){
+//     if (typeof number[numberIndex] == 'undefined'){
+//         number[numberIndex] = num;
+//     }
+//     else {
+//         number[numberIndex] +=num;
+//     }
+//     $('#display').text(number);
+// }
 
 
 function operators(op){
@@ -114,46 +115,41 @@ function clear(){
 
 function equals() {
     // **************** LF Start
-    number.push(current); //push current value to number array - was going to be moved elsewhere in the numbers function
-    console.log("number array", number);  //console.log number array
+    //push current value to number array - was going to be moved elsewhere in the numbers function
+    //console.log number array
 
-    if (opclick == true){  //if operator clicked is true
-        alert("You cannot end your entry with something besides a number");  //alert cant end with operator
-    }
-    else {  //else
+    //if operator clicked is true
+    //alert cant end with operator
+    //else
 
-        for (var i = 0; i < number.length; i++) {  //for loop of number array
-            var total = null;  // set var = null;
-            switch (number[i]) {  //switch case
-                case 'x':  //case for multiply
-                    total= parseFloat(number[i-1]) * parseFloat(number[i+1]);  // parse float before and after index
-                    break;  // break
-                case '/':
-                    total= parseFloat(number[i-1]) / parseFloat(number[i+1]);  //same for division
-                    break;  //break
-            }
-            if (total != null){  //if not equal to null
-                number.splice(i-1, 3, total); //splice number from before index, remove 3 and replace with result
-            }
-        }
+    //for loop of number array
+    // set local var = null;
+    //switch case
+    //case for multiply
+    // parse float before and after index
+    // break
 
-        for (var i=0; i < number.length; i++) {  // for loop of number array
-            var total = null;  //set var = null;
-            switch (number[i]) {  //switch case
-                case '+': //addition case
-                    total = parseFloat(number[i-1]) + parseFloat(number[i+1]); //var is parsefloat num before and after doing math
-                    break; //break
-                case '-': //subtraction case
-                    total = parseFloat(number[i-1]) - parseFloat(number[i+1]); //var is parsefloat num before and after doing math
-                    break;
-            }
-                if (total != null){  //if result not equal to null
-                    number.splice(i-1, 3, total); //splice before index and replace 3 values with result
-                }
-        }
+    //same for division
+    //break
 
-        $('#display').html(number); //display html of array
-    }
+    //if local var not equal to null
+    //splice number from before index, remove 3 and replace with result
+
+
+    // for loop of number array
+    //set local var = null;
+    //switch case
+    //addition case
+    //var is parsefloat num before and after doing math
+    //break
+    //subtraction case
+    //var is parsefloat num before and after doing math
+
+    //if local var not equal to null
+    //splice before index and replace 3 values with result
+
+    //display html of array
+
     // ************ LF End
 }
 
