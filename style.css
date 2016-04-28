@@ -50,7 +50,6 @@ h1{
     border: .5px solid black;
     border-radius: 8px;
     font-size: 35px;
-
 }
 
 #numbers button {
@@ -69,4 +68,7 @@ h1{
 #total {
     text-align: center;
     font-size: 40px;
+}
+#numbers #off{
+    font-size: 25px;
 }

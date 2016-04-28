@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css" type="text/css">
     <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-    <script src="http://Learning-Fuze.github.io/calculator/calculator.js"></script>
+    <!--<script src="http://Learning-Fuze.github.io/calculator/calculator.js"></script>-->
     <script src="script.js"></script>
     <title>Calculator</title>
 </head>
@@ -13,29 +13,29 @@
     <div id="calculator">
         <div id="total">
         </div>
-        <button id="clear">C</button>
-        <button id="clearall">AC</button>
+        <button id="clear" this-value="C">C</button>
+        <button id="clearall" this-value="AC">AC</button>
 
         <div id="operators">
-            <button>+</button>
-            <button>-</button>
-            <button>/</button>
-            <button>*</button>
-            <button>=</button>
+            <button this-value="operator">+</button>
+            <button this-value="operator">-</button>
+            <button this-value="operator">/</button>
+            <button this-value="operator">*</button>
+            <button this-value="equals">=</button>
         </div>
         <div id="numbers">
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>.</button>
-            <button>0</button>
-            <button></button>
+            <button value="1" this-value="number">1</button>
+            <button value="2" this-value="number">2</button>
+            <button value="3" this-value="number">3</button>
+            <button value="4" this-value="number">4</button>
+            <button value="5" this-value="number">5</button>
+            <button value="6" this-value="number">6</button>
+            <button value="7" this-value="number">7</button>
+            <button value="8" this-value="number">8</button>
+            <button value="9" this-value="number">9</button>
+            <button value="." this-value="number">.</button>
+            <button value="0" this-value="number">0</button>
+            <button id="off" this-value="OFF">OFF</button>
         </div>
     </div>
 </body>
