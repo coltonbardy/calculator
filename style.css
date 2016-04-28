@@ -12,12 +12,14 @@ h1{
     border-radius: 10px;
     text-align: center;
 }
-#total {
+#display {
     background-color: whitesmoke;
     border: 1px solid black;
     border-radius: 10px;
     height: 100px;
     width: 350px;
+    text-align: center;
+    font-size: 40px;
 }
 #clear, #clearall{
     position: absolute;
@@ -64,10 +66,6 @@ h1{
     background: lightgray;
     border: 2px solid black;
     border-radius: 10px;
-}
-#total {
-    text-align: center;
-    font-size: 40px;
 }
 #numbers #off{
     font-size: 25px;
