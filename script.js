@@ -1,7 +1,3 @@
-/**
- * Created by hallj on 4/26/2016.
- */
-
 //global variables
 // var my_calculator = new calculator(callback);
 var btnSelected = [''];
