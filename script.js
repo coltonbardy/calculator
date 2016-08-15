@@ -1,7 +1,7 @@
 //global variables
 // var my_calculator = new calculator(callback);
 var btnSelected = [''];
-var btnSelectedIndex = 0;
+var Index = 0;
 var display;
 
 $(document).ready(function(){
@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 //Function when a button is clicked
 function btnClicked() {
-    var type = $(this).attr('what-type');
+    var type = $(this).attr('type');
     var value = $(this).text();
     switch (type) {
         case 'AC':
@@ -37,12 +37,13 @@ function btnClicked() {
             equalSelected();
             break;
     }
+    $('.display').html = display;
 }
 
 //Function for AC
 //clears all the data in the array
 function allClear () {
-    // $('#display').html('');
+    $('#display').html('');
     btnSelected =[''];
 
 }
@@ -50,17 +51,17 @@ function allClear () {
 //Function for C
 //clears the last input that was placed
 function clearLast () {
-    btnSelected[btnSelectedIndex]= '';
+    btnSelected[Index]= '';
 }
 
 //Function that enters the number string into the array
 //function should CONCAT if a number is selected after
 function numberSelected (value) {
-    if (typeof btnSelected[btnSelectedIndex] == 'undefined') {
-        btnSelected[btnSelectedIndex] = value;
+    if (typeof btnSelected[Index] == 'undefined') {
+        btnSelected[Index] = value;
     }
     else {
-        btnSelected[btnSelectedIndex] += value;
+        btnSelected[Index] += value;
         console.log(value);
     }
     refresh(value);
@@ -81,7 +82,7 @@ function operatorSelected(value) {
             break;
         default:
             btnSelected.push(value);
-            btnSelectedIndex = btnSelected.length;
+            Index = btnSelected.length;
             refresh(' ' + value + ' ');
             console.log('num before' + n);
     }
