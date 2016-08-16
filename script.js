@@ -37,14 +37,14 @@ function btnClicked() {
             equalSelected();
             break;
     }
-    $('.display').html = display;
+    $('.display').html(btnSelected);
 }
 
 //Function for AC
 //clears all the data in the array
 function allClear () {
     $('.display').html('');
-    btnSelected =[''];
+    btnSelected =[];
 
 }
 
@@ -53,8 +53,7 @@ function allClear () {
 function clearLast () {
     btnSelected.pop(btnSelected[Index]);
     display = btnSelected;
-    Index = (Index-1);
-    refresh();
+    $('.display').html(display);
 }
 
 //Function that enters the number string into the array
@@ -152,7 +151,7 @@ function equalSelected() {
 }
 
 function refresh (x) {
-    var temp = display.html();
+    var temp = display.html(x);
     temp += x;
     display.html(temp);
 }
