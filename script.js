@@ -43,7 +43,7 @@ function btnClicked() {
 //Function for AC
 //clears all the data in the array
 function allClear () {
-    $('#display').html('');
+    $('.display').html('');
     btnSelected =[''];
 
 }
@@ -51,7 +51,10 @@ function allClear () {
 //Function for C
 //clears the last input that was placed
 function clearLast () {
-    btnSelected[Index]= '';
+    btnSelected.pop(btnSelected[Index]);
+    display = btnSelected;
+    Index = (Index-1);
+    refresh();
 }
 
 //Function that enters the number string into the array
@@ -91,7 +94,6 @@ function operatorSelected(value) {
 //Function that makes the equals calculate the array
 //using parseFloat for decimals
 function equalSelected() {
-    // ************* LF Start
     //logs the string 'array at start of equals' + the array name
     console.log("btnSelected", btnSelected);
 
@@ -147,7 +149,6 @@ function equalSelected() {
     }
 
 
-    // ***************** LF End 
 }
 
 function refresh (x) {
