@@ -43,7 +43,7 @@ function btnClicked() {
 //Function for AC
 //clears all the data in the array
 function allClear () {
-    $('.display').html('');
+    $('.display').html('0');
     btnSelected =[];
 
 }
@@ -53,7 +53,7 @@ function allClear () {
 function clearLast () {
     btnSelected.pop(btnSelected[Index]);
     display = btnSelected;
-    $('.display').html(display);
+    $('.display').html(btnSelected);
 }
 
 //Function that enters the number string into the array
@@ -144,14 +144,14 @@ function equalSelected() {
         // log the array with a string 'array after loop',
         console.log("array after loop", btnSelected);
         //display the html with the parameter of the array name
-        display.html(btnSelected);
+        $('.display').html(btnSelected);
     }
 
 
 }
 
 function refresh (x) {
-    var temp = display.html(x);
+    var temp = $('.display').html(x);
     temp += x;
-    display.html(temp);
+    $('.display').html(temp);
 }
